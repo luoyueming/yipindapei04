@@ -1,0 +1,113 @@
+/* 样式重置 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, small, strike, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font: inherit;
+	font-style: normal;
+	word-wrap:break-word;
+	vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:inherit;
+	font-weight:normal;
+	line-height: 1;
+	text-rendering:optimizelegibility
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-weight:normal;
+	line-height:1;
+}
+html {
+	height: 100%;
+	font-family: 'microsoft yahei', sans-serif;
+	font-size:100%;
+	line-height: 1;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;	
+}
+ol, ul {
+	list-style: none;
+}
+li {
+	list-style-type:none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+q, blockquote {
+	quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "";
+	content: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+img {
+	border: none;
+	vertical-align: middle;
+}
+pre {
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	white-space: pre-wrap
+}
+input, textarea {
+	outline:none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:focus {
+	outline:none;
+	-webkit-focus-ring-color;
+	outline-offset:-2px
+}
+a:hover {
+	outline:0;
+}
+a.unlink {
+	cursor: text;
+}
+button, input, select, textarea {
+	margin:0;
+	padding:0;
+	font-family: 'microsoft yahei', sans-serif;
+	vertical-align:middle;	
+}
+textarea {
+	overflow:auto;
+	resize: none;
+	vertical-align:top
+}
+.clearfix {
+	*zoom:1
+}
+.clearfix:before, .clearfix:after {
+	display:table;
+	line-height:0;
+	content:""
+}
+.clearfix:after {
+	clear:both
+}
+.l{
+	float: left;
+}
+.r{
+	float: right;
+}
+.hide {
+	display: none;
+}

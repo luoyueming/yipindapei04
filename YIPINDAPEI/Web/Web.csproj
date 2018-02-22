@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewXzc.Web</RootNamespace>
+    <AssemblyName>NewXzc.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LtpPageControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\LtpPageControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NVelocity">
+      <HintPath>..\Lib\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="okpower.Utility">
+      <HintPath>..\Lib\okpower.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="URLRewriter">
+      <HintPath>..\Lib\URLRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Base.dll" />
+    <Content Include="bin\Base.pdb" />
+    <Content Include="bin\BLL.dll" />
+    <Content Include="bin\BLL.pdb" />
+    <Content Include="bin\Common.dll" />
+    <Content Include="bin\Common.pdb" />
+    <Content Include="bin\DAL.dll" />
+    <Content Include="bin\DAL.pdb" />
+    <Content Include="bin\DBUtility.dll" />
+    <Content Include="bin\DBUtility.pdb" />
+    <Content Include="bin\IBatisNet.Common.dll" />
+    <Content Include="bin\IBatisNet.DataMapper.dll" />
+    <Content Include="bin\LTP.Accounts.dll" />
+    <Content Include="bin\LtpPageControl.dll" />
+    <Content Include="bin\Microsoft.Web.UI.WebControls.dll" />
+    <Content Include="bin\Model.dll" />
+    <Content Include="bin\Model.pdb" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.Net20.dll" />
+    <Content Include="bin\NewXzc.Web.dll" />
+    <Content Include="bin\NewXzc.Web.pdb" />
+    <Content Include="bin\NPOI.dll" />
+    <Content Include="bin\NPOI.OOXML.dll" />
+    <Content Include="bin\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\NVelocity.dll" />
+    <Content Include="bin\okpower.Utility.dll" />
+    <Content Include="bin\OpenSmtp.dll" />
+    <Content Include="bin\OWC10Chart.dll" />
+    <Content Include="bin\System.Data.SQLite.DLL" />
+    <Content Include="bin\URLRewriter.dll" />
+    <Content Include="HTML_MODEL\detail.htm" />
+    <Content Include="HTML_MODEL\list.htm" />
+    <Content Include="HTML_MODEL\list.js" />
+    <Content Include="HTML_MODEL\tiao3.js" />
+    <Content Include="HTML_MODEL\wap\detail.htm" />
+    <Content Include="HTML_MODEL\wap\list.htm" />
+    <Content Include="index.aspx" />
+    <Content Include="template\Article\Article_List.html" />
+    <Content Include="template\Article\Article_Subject_Detail.html" />
+    <Content Include="template\Article\newarticle\acommon.html" />
+    <Content Include="template\Article\newarticle\dapei.html" />
+    <Content Include="template\Article\newarticle\dapei_detail.html" />
+    <Content Include="template\Article\newarticle\dianpu.html" />
+    <Content Include="template\Article\newarticle\dianpu_detail.html" />
+    <Content Include="template\Article\newarticle\jingxuan.html" />
+    <Content Include="template\Article\newarticle\rfzdp.html" />
+    <Content Include="template\Article\newarticle\subject.html" />
+    <Content Include="template\Article\newarticle\subject_about.html" />
+    <Content Include="template\Article\newarticle\subject_index.html" />
+    <Content Include="template\Error404.html" />
+    <Content Include="template\FindPwd\Step1.html" />
+    <Content Include="template\FindPwd\Step2.html" />
+    <Content Include="template\FindPwd\Step3.html" />
+    <Content Include="template\FindPwd\Step4.html" />
+    <Content Include="template\Foot.html" />
+    <Content Include="template\Foot_Article.html" />
+    <Content Include="template\foot_index.html" />
+    <Content Include="template\get_article_all_contents.html" />
+    <Content Include="template\get_article_all_contents_upload.html" />
+    <Content Include="template\Handle\verifyimgt.html" />
+    <Content Include="template\Head.html" />
+    <Content Include="template\Head_Article.html" />
+    <Content Include="template\head_index.html" />
+    <Content Include="template\help\AboutUs.html" />
+    <Content Include="template\help\common.html" />
+    <Content Include="template\help\LinkUs.html" />
+    <Content Include="template\img\00.jpg" />
+    <Content Include="template\img\01.jpg" />
+    <Content Include="template\img\02.jpg" />
+    <Content Include="template\img\03.jpg" />
+    <Content Include="template\img\1472192308.png" />
+    <Content Include="template\img\32-32红人汇.png" />
+    <Content Include="template\img\88-88.jpg" />
+    <Content Include="template\img\a.jpg" />
+    <Content Include="template\img\ad.jpg" />
+    <Content Include="template\img\ad1.jpg" />
+    <Content Include="template\img\all.png" />
+    <Content Include="template\img\aqi.jpg" />
+    <Content Include="template\img\banner.png" />
+    <Content Include="template\img\bgIcon.png" />
+    <Content Include="template\img\blood.jpg" />
+    <Content Include="template\img\bottomLogo.png" />
+    <Content Include="template\img\btn.png" />
+    <Content Include="template\img\btn1.png" />
+    <Content Include="template\img\btn2.png" />
+    <Content Include="template\img\buy.png" />
+    <Content Include="template\img\buybak.png" />
+    <Content Include="template\img\c.jpg" />
+    <Content Include="template\img\checkbox_bg.png" />
+    <Content Include="template\img\children.jpg" />
+    <Content Include="template\img\committee.jpg" />
+    <Content Include="template\img\committeeBg.png" />
+    <Content Include="template\img\committeePoster.jpg" />
+    <Content Include="template\img\commontop.png" />
+    <Content Include="template\img\crowf.png" />
+    <Content Include="template\img\cutImg\1.png" />
+    <Content Include="template\img\cutImg\alpha10.png" />
+    <Content Include="template\img\cutImg\alpha20.png" />
+    <Content Include="template\img\cutImg\btn1.png" />
+    <Content Include="template\img\cutImg\btn2.png" />
+    <Content Include="template\img\cutImg\btn3.png" />
+    <Content Include="template\img\cutImg\layerDelBtn.png" />
+    <Content Include="template\img\cutImg\people.png" />
+    <Content Include="template\img\default_head\large_default.jpg" />
+    <Content Include="template\img\default_head\middle_default.jpg" />
+    <Content Include="template\img\default_head\small_default.jpg" />
+    <Content Include="template\img\detail-topnews.jpg" />
+    <Content Include="template\img\dian.jpg" />
+    <Content Include="template\img\discussTop.png" />
+    <Content Include="template\img\double_quotes_l.png" />
+    <Content Include="template\img\double_quotes_r.png" />
+    <Content Include="template\img\dpxian.jpg" />
+    <Content Include="template\img\election.jpg" />
+    <Content Include="template\img\fasixin.jpg" />
+    <Content Include="template\img\fg-line.jpg" />
+    <Content Include="template\img\floor.png" />
+    <Content Include="template\img\gor.gif" />
+    <Content Include="template\img\heart.png" />
+    <Content Include="template\img\hongren2.jpg" />
+    <Content Include="template\img\hongren2.png" />
+    <Content Include="template\img\hrenh.jpg" />
+    <Content Include="template\img\hszb\2.png" />
+    <Content Include="template\img\hszb\2f.png" />
+    <Content Include="template\img\hszb\3.png" />
+    <Content Include="template\img\hszb\3f.png" />
+    <Content Include="template\img\hszb\4.png" />
+    <Content Include="template\img\hszb\4f.png" />
+    <Content Include="template\img\hszb\5.png" />
+    <Content Include="template\img\hszb\5f.png" />
+    <Content Include="template\img\hszb\6.png" />
+    <Content Include="template\img\hszb\6f.png" />
+    <Content Include="template\img\hszb\AndroidB.png" />
+    <Content Include="template\img\hszb\AndroidR.png" />
+    <Content Include="template\img\hszb\back1.png" />
+    <Content Include="template\img\hszb\back2.png" />
+    <Content Include="template\img\hszb\back3.png" />
+    <Content Include="template\img\hszb\bmbb.png" />
+    <Content Include="template\img\hszb\ecode.png" />
+    <Content Include="template\img\hszb\gntm.png" />
+    <Content Include="template\img\hszb\hg.png" />
+    <Content Include="template\img\hszb\iosB.png" />
+    <Content Include="template\img\hszb\iosR.png" />
+    <Content Include="template\img\hszb\ipadB.png" />
+    <Content Include="template\img\hszb\ipadR.png" />
+    <Content Include="template\img\hszb\logo.png" />
+    <Content Include="template\img\hszb\mvzb.png" />
+    <Content Include="template\img\hszb\sl.png" />
+    <Content Include="template\img\hszb\yszb.png" />
+    <Content Include="template\img\hszb\zeroL.png" />
+    <Content Include="template\img\icon.png" />
+    <Content Include="template\img\icon1.png" />
+    <Content Include="template\img\icons.png" />
+    <Content Include="template\img\iconWarn.png" />
+    <Content Include="template\img\icon_close.png" />
+    <Content Include="template\img\icon_deal.png" />
+    <Content Include="template\img\icon_focus.png" />
+    <Content Include="template\img\icon_progress.png" />
+    <Content Include="template\img\icon_share.png" />
+    <Content Include="template\img\icon_sprites.png" />
+    <Content Include="template\img\ico_404.png" />
+    <Content Include="template\img\idid_ie4wezrsgy2gey3ghezdambqgqyde_9x5.png" />
+    <Content Include="template\img\information\ad.jpg" />
+    <Content Include="template\img\information\ad1.jpg" />
+    <Content Include="template\img\information\ad2.jpg" />
+    <Content Include="template\img\information\adress2.jpg" />
+    <Content Include="template\img\information\alpha70.png" />
+    <Content Include="template\img\information\alpha80.png" />
+    <Content Include="template\img\information\alpha90.png" />
+    <Content Include="template\img\information\arrow.png" />
+    <Content Include="template\img\information\banner.jpg" />
+    <Content Include="template\img\information\bbs-fbg.png" />
+    <Content Include="template\img\information\bbs-imgbg00.png" />
+    <Content Include="template\img\information\border_men.png" />
+    <Content Include="template\img\information\c1.jpg" />
+    <Content Include="template\img\information\d1.jpg" />
+    <Content Include="template\img\information\dash.png" />
+    <Content Include="template\img\information\dot.png" />
+    <Content Include="template\img\information\fenge-x.png" />
+    <Content Include="template\img\information\footer_b.jpg" />
+    <Content Include="template\img\information\foucs_icon.png" />
+    <Content Include="template\img\information\f_code_icon.png" />
+    <Content Include="template\img\information\f_weibo_icon.png" />
+    <Content Include="template\img\information\good.png" />
+    <Content Include="template\img\information\goTop.png" />
+    <Content Include="template\img\information\gradient_bg.png" />
+    <Content Include="template\img\information\hd_btn_next.png" />
+    <Content Include="template\img\information\hd_btn_next_on.png" />
+    <Content Include="template\img\information\hd_btn_prev.png" />
+    <Content Include="template\img\information\hd_btn_prev_on.png" />
+    <Content Include="template\img\information\headerBg.jpg" />
+    <Content Include="template\img\information\heiAlpha80.png" />
+    <Content Include="template\img\information\home.png" />
+    <Content Include="template\img\information\icon-top-allnav.png" />
+    <Content Include="template\img\information\icon_focus.png" />
+    <Content Include="template\img\information\icon_search.png" />
+    <Content Include="template\img\information\info_foot_logo.jpg" />
+    <Content Include="template\img\information\info_logo.png" />
+    <Content Include="template\img\information\l1.jpg" />
+    <Content Include="template\img\information\list1.jpg" />
+    <Content Include="template\img\information\logo.png" />
+    <Content Include="template\img\information\lslides.jpg" />
+    <Content Include="template\img\information\navigation.png" />
+    <Content Include="template\img\information\navigation1.png" />
+    <Content Include="template\img\information\new-search.jpg" />
+    <Content Include="template\img\information\newinfologo2.jpg" />
+    <Content Include="template\img\information\noticeBg.png" />
+    <Content Include="template\img\information\p1.jpg" />
+    <Content Include="template\img\information\p2.jpg" />
+    <Content Include="template\img\information\p3.jpg" />
+    <Content Include="template\img\information\p4.jpg" />
+    <Content Include="template\img\information\p5.jpg" />
+    <Content Include="template\img\information\photoBg.gif" />
+    <Content Include="template\img\information\photoTxtBg.png" />
+    <Content Include="template\img\information\photoTxtBg1.png" />
+    <Content Include="template\img\information\play_btn.png" />
+    <Content Include="template\img\information\qrcode.jpg" />
+    <Content Include="template\img\information\r1.jpg" />
+    <Content Include="template\img\information\r2.jpg" />
+    <Content Include="template\img\information\r3.jpg" />
+    <Content Include="template\img\information\r4.jpg" />
+    <Content Include="template\img\information\r5.jpg" />
+    <Content Include="template\img\information\r6.jpg" />
+    <Content Include="template\img\information\s1.jpg" />
+    <Content Include="template\img\information\sildes.jpg" />
+    <Content Include="template\img\information\video_title.png" />
+    <Content Include="template\img\information\weibo.jpg" />
+    <Content Include="template\img\information\weixin.jpg" />
+    <Content Include="template\img\information\zoom.png" />
+    <Content Include="template\img\jian.png" />
+    <Content Include="template\img\JINGD.png" />
+    <Content Include="template\img\jm.png" />
+    <Content Include="template\img\leader.png" />
+    <Content Include="template\img\line-black.png" />
+    <Content Include="template\img\line.png" />
+    <Content Include="template\img\linebg.png" />
+    <Content Include="template\img\loading.gif" />
+    <Content Include="template\img\location.png" />
+    <Content Include="template\img\login.jpg" />
+    <Content Include="template\img\logo.png" />
+    <Content Include="template\img\logoindex.png" />
+    <Content Include="template\img\lookfor.png" />
+    <Content Include="template\img\m.jpg" />
+    <Content Include="template\img\mark.png" />
+    <Content Include="template\img\mp.jpg" />
+    <Content Include="template\img\newlogo.png" />
+    <Content Include="template\img\nocontent.png" />
+    <Content Include="template\img\offnext.jpg" />
+    <Content Include="template\img\onnext.jpg" />
+    <Content Include="template\img\p.jpg" />
+    <Content Include="template\img\pa.gif" />
+    <Content Include="template\img\partySymbol.png" />
+    <Content Include="template\img\people.png" />
+    <Content Include="template\img\plCrowf.png" />
+    <Content Include="template\img\poster.jpg" />
+    <Content Include="template\img\py.jpg" />
+    <Content Include="template\img\radio.png" />
+    <Content Include="template\img\register.jpg" />
+    <Content Include="template\img\share\public_bg.png" />
+    <Content Include="template\img\share_sina.png" />
+    <Content Include="template\img\share_weixin.png" />
+    <Content Include="template\img\statusBar1.gif" />
+    <Content Include="template\img\statusBar2.gif" />
+    <Content Include="template\img\statusBar3.gif" />
+    <Content Include="template\img\statusBar4.gif" />
+    <Content Include="template\img\submit.png" />
+    <Content Include="template\img\success.png" />
+    <Content Include="template\img\third-chat.jpg" />
+    <Content Include="template\img\third-qq.jpg" />
+    <Content Include="template\img\third-sina.jpg" />
+    <Content Include="template\img\thirdlogin\Connect_logo_7.png" />
+    <Content Include="template\img\thirdlogin\QQ.png" />
+    <Content Include="template\img\thirdlogin\weibo.png" />
+    <Content Include="template\img\thirdlogin\weixin.png" />
+    <Content Include="template\img\thirdlogin\weixin_login.png" />
+    <Content Include="template\img\thumb.jpg" />
+    <Content Include="template\img\thumb.png" />
+    <Content Include="template\img\today.png" />
+    <Content Include="template\img\tops.jpg" />
+    <Content Include="template\img\topshot.jpg" />
+    <Content Include="template\img\triangleDown.png" />
+    <Content Include="template\img\verify.jpg" />
+    <Content Include="template\img\w.jpg" />
+    <Content Include="template\img\weip.png" />
+    <Content Include="template\img\xfoor.png" />
+    <Content Include="template\img\xmqkBg.png" />
+    <Content Include="template\img\xtip.png" />
+    <Content Include="template\img\xtipr.png" />
+    <Content Include="template\img\xwkbig.jpg" />
+    <Content Include="template\img\xwkbig.png" />
+    <Content Include="template\img\xwkfont.png" />
+    <Content Include="template\img\xwklater.png" />
+    <Content Include="template\img\yan.jpg" />
+    <Content Include="template\img\zixun-title.jpg" />
+    <Content Include="template\img\zixun.jpg" />
+    <Content Include="template\img\zoom.png" />
+    <Content Include="template\img\zuozhebg.jpg" />
+    <Content Include="template\img\招募兴趣吧.jpg" />
+    <Content Include="template\img\红人微吧招募兴趣吧.jpg" />
+    <Content Include="template\img\首页5_03.jpg" />
+    <Content Include="template\Index.html" />
+    <Content Include="template\index_new.html" />
+    <Content Include="template\js\article\Article.js" />
+    <Content Include="template\js\article\Article_Subject_Detail.js" />
+    <Content Include="template\js\article\jquery.hover3d.js" />
+    <Content Include="template\js\article\jquery.SuperSlide.2.1.1.js" />
+    <Content Include="template\js\article\newarticle\dapei.js" />
+    <Content Include="template\js\article\newarticle\dapei_detail.js" />
+    <Content Include="template\js\article\newarticle\dianpu.js" />
+    <Content Include="template\js\article\newarticle\dianpu_detail.js" />
+    <Content Include="template\js\article\newarticle\jingxuan.js" />
+    <Content Include="template\js\article\newarticle\subject.js" />
+    <Content Include="template\js\article\newarticle\subject_about.js" />
+    <Content Include="template\js\article\Search.js" />
+    <Content Include="template\js\common\jquery.1.8.3.min.js" />
+    <Content Include="template\js\common\jquery.slides.min.js" />
+    <Content Include="template\js\common\reset_img.js" />
+    <Content Include="template\js\common\tanceng.js" />
+    <Content Include="template\js\common\uaredirect.js" />
+    <Content Include="template\js\common\Validate.js" />
+    <Content Include="template\js\common\Validate_LoginState.js" />
+    <Content Include="template\js\findpwd\step1.js" />
+    <Content Include="template\js\findpwd\step2.js" />
+    <Content Include="template\js\findpwd\step3.js" />
+    <Content Include="template\js\findpwd\step4.js" />
+    <Content Include="template\js\Index\info_index.js" />
+    <Content Include="template\js\Index\jquery.slides.min.js" />
+    <Content Include="template\js\Index\tools.js" />
+    <Content Include="template\js\Index\zepp.js" />
+    <Content Include="template\js\Index\zepp2.js" />
+    <Content Include="template\js\layer\extend\layer.ext.js" />
+    <Content Include="template\js\layer\layer.js" />
+    <Content Include="template\js\layer\layer.min.js" />
+    <Content Include="template\js\layer\skin\default\close_fc.png" />
+    <Content Include="template\js\layer\skin\default\new_close_btn.png" />
+    <Content Include="template\js\layer\skin\default\textbg.png" />
+    <Content Include="template\js\layer\skin\default\xubox_ico0.png" />
+    <Content Include="template\js\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="template\js\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="template\js\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="template\js\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="template\js\layer\skin\default\xubox_title0.png" />
+    <Content Include="template\js\layer\skin\layer.css" />
+    <Content Include="template\js\layer\skin\layer.ext.css" />
+    <Content Include="template\js\layer\skin\layerPatch.css" />
+    <Content Include="template\js\PersonalCenter\setting\cutImg.js" />
+    <Content Include="template\js\PersonalCenter\setting\infoset.js" />
+    <Content Include="template\js\PersonalCenter\setting\pwdset.js" />
+    <Content Include="template\js\Slider.js" />
+    <Content Include="template\js\userlogin\Login_Person.js" />
+    <Content Include="template\js\userlogin\Login_Third.js" />
+    <Content Include="template\js\userlogin\placeholder.js" />
+    <Content Include="template\js\userlogin\Register_Person.js" />
+    <Content Include="template\js\validateErr.js" />
+    <Content Include="template\PersonalCenter\setting\HeadImg.html" />
+    <Content Include="template\PersonalCenter\setting\Info_Set.html" />
+    <Content Include="template\PersonalCenter\setting\Pwd_Set.html" />
+    <Content Include="template\style\Article\animate.min.css" />
+    <Content Include="template\style\Article\Article.css" />
+    <Content Include="template\style\Article\error.css" />
+    <Content Include="template\style\Article\information.css" />
+    <Content Include="template\style\Article\information_new.css" />
+    <Content Include="template\style\Article\newlist.css" />
+    <Content Include="template\style\Article\special - 副本.css" />
+    <Content Include="template\style\Article\special.css" />
+    <Content Include="template\style\Article\whjj.css" />
+    <Content Include="template\style\Common\common.css" />
+    <Content Include="template\style\Common\page.css" />
+    <Content Include="template\style\Common\reset.css" />
+    <Content Include="template\style\Common\tanceng.css" />
+    <Content Include="template\style\cutImg\css\border-anim-h.gif" />
+    <Content Include="template\style\cutImg\css\border-anim-v.gif" />
+    <Content Include="template\style\cutImg\css\border-h.gif" />
+    <Content Include="template\style\cutImg\css\border-v.gif" />
+    <Content Include="template\style\cutImg\css\imgareaselect-animated.css" />
+    <Content Include="template\style\cutImg\css\imgareaselect-default.css" />
+    <Content Include="template\style\cutImg\css\imgareaselect-deprecated.css" />
+    <Content Include="template\style\cutImg\CutImgTip.css" />
+    <Content Include="template\style\cutImg\CutScripts\jquery.imgareaselect.js" />
+    <Content Include="template\style\cutImg\CutScripts\jquery.imgareaselect.min.js" />
+    <Content Include="template\style\cutImg\CutScripts\jquery.imgareaselect.pack.js" />
+    <Content Include="template\style\cutImg\CutScripts\jquery.min.js" />
+    <Content Include="template\style\cutImg\uploadify\jquery-1.7.1.js" />
+    <Content Include="template\style\cutImg\uploadify\jquery.uploadify.js" />
+    <Content Include="template\style\cutImg\uploadify\jquery.uploadify.min.js" />
+    <Content Include="template\style\cutImg\uploadify\uploadify-cancel.png" />
+    <Content Include="template\style\cutImg\uploadify\uploadify.css" />
+    <Content Include="template\style\cutImg\uploadify\uploadify.swf" />
+    <Content Include="template\style\FindPwd\pwdrecovery.css" />
+    <Content Include="template\style\Index\head_new.css" />
+    <Content Include="template\style\Index\index.css" />
+    <Content Include="template\style\Index\information.css" />
+    <Content Include="template\style\Index\reset.css" />
+    <Content Include="template\style\layer\layer.css" />
+    <Content Include="template\style\PersonalCenter\modify.css" />
+    <Content Include="template\style\UserLogin\login.css" />
+    <Content Include="template\style\UserLogin\validateErr.css" />
+    <Content Include="template\UserLogin\Login.html" />
+    <Content Include="template\UserLogin\Login_Third.html" />
+    <Content Include="template\UserLogin\LogOut.html" />
+    <Content Include="template\UserLogin\QQlogin.html" />
+    <Content Include="template\UserLogin\Register.html" />
+    <Content Include="template\UserLogin\SinaLogin.html" />
+    <Content Include="template\UserLogin\wechat_return_url.html" />
+    <Content Include="template\UserLogin\WeiXinLogin.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ArticleHelper.cs" />
+    <Compile Include="Common\CheckIsLogin.cs" />
+    <Compile Include="Common\CheckIsLogin_HongRenHui.cs" />
+    <Compile Include="Common\Company_Money_Helper.cs" />
+    <Compile Include="Common\CookieManage.cs" />
+    <Compile Include="Common\CookieManage_HongRenHui.cs" />
+    <Compile Include="Common\CPA_Helper.cs" />
+    <Compile Include="Common\DwResumeHelper.cs" />
+    <Compile Include="Common\FolderSizeHelper.cs" />
+    <Compile Include="Common\GetEmailLinkMan.cs" />
+    <Compile Include="Common\GetNowCalendar.cs" />
+    <Compile Include="Common\Get_A_Href.cs" />
+    <Compile Include="Common\Get_Hanzi_Shouzimu.cs" />
+    <Compile Include="Common\Get_Http_Url_Content.cs" />
+    <Compile Include="Common\Get_Img_UrlList.cs" />
+    <Compile Include="Common\HttpRequestHelper.cs" />
+    <Compile Include="Common\ImgResumeItem.cs" />
+    <Compile Include="Common\Kongzhi_WebConfig.cs" />
+    <Compile Include="Common\Message.cs" />
+    <Compile Include="Common\MyHttpModule.cs" />
+    <Compile Include="Common\PageClass.cs" />
+    <Compile Include="Common\PlaceHelper.cs" />
+    <Compile Include="Common\Save_Img_Http.cs" />
+    <Compile Include="Common\Send_Short_Message.cs" />
+    <Compile Include="Common\Set_Season_Ypdp_Typename.cs" />
+    <Compile Include="Common\SQLHelper.cs" />
+    <Compile Include="Common\String_Manage.cs" />
+    <Compile Include="Common\TelHelper.cs" />
+    <Compile Include="Common\TypeHelper.cs" />
+    <Compile Include="Common\uhelper\GetInfo_Obj.cs" />
+    <Compile Include="Common\uhelper\GetVote_PartyType.cs" />
+    <Compile Include="Common\uhelper\Return_HttpURL.cs" />
+    <Compile Include="Common\UploadFileHelper.cs" />
+    <Compile Include="Common\WebPreview.cs" />
+    <Compile Include="Common\WordHelper.cs" />
+    <Compile Include="Common\WordsFilter.cs" />
+    <Compile Include="Common\ZhongchouHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="templatecs\Article\Article_List.cs" />
+    <Compile Include="templatecs\Article\Article_Subject_Detail.cs" />
+    <Compile Include="templatecs\Article\newarticle\acommon.cs" />
+    <Compile Include="templatecs\Article\newarticle\dapei.cs" />
+    <Compile Include="templatecs\Article\newarticle\dapei_detail.cs" />
+    <Compile Include="templatecs\Article\newarticle\dianpu.cs" />
+    <Compile Include="templatecs\Article\newarticle\dianpu_detail.cs" />
+    <Compile Include="templatecs\Article\newarticle\jingxuan.cs" />
+    <Compile Include="templatecs\Article\newarticle\rfzdp.cs" />
+    <Compile Include="templatecs\Article\newarticle\subject.cs" />
+    <Compile Include="templatecs\Article\newarticle\subject_about.cs" />
+    <Compile Include="templatecs\Article\newarticle\subject_index.cs" />
+    <Compile Include="templatecs\Error404.cs" />
+    <Compile Include="templatecs\FindPwd\Step1.cs" />
+    <Compile Include="templatecs\FindPwd\Step2.cs" />
+    <Compile Include="templatecs\FindPwd\Step3.cs" />
+    <Compile Include="templatecs\FindPwd\Step4.cs" />
+    <Compile Include="templatecs\Foot.cs" />
+    <Compile Include="templatecs\Foot_Article.cs" />
+    <Compile Include="templatecs\foot_index.cs" />
+    <Compile Include="templatecs\get_article_all_contents.cs" />
+    <Compile Include="templatecs\get_article_all_contents_upload.cs" />
+    <Compile Include="templatecs\Handle\Create_html_handle.ashx.cs">
+      <DependentUpon>Create_html_handle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\FindPwdHandle.ashx.cs">
+      <DependentUpon>FindPwdHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\LoginHandle.ashx.cs">
+      <DependentUpon>LoginHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\PersonalHandle.ashx.cs">
+      <DependentUpon>PersonalHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\RegisterHandle.ashx.cs">
+      <DependentUpon>RegisterHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\ThirdRegisterHandle.ashx.cs">
+      <DependentUpon>ThirdRegisterHandle.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\upload.ashx.cs">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="templatecs\Handle\verifyimgt.cs" />
+    <Compile Include="templatecs\Head.cs" />
+    <Compile Include="templatecs\Head_Article.cs" />
+    <Compile Include="templatecs\head_index.cs" />
+    <Compile Include="templatecs\help\AboutUs.cs" />
+    <Compile Include="templatecs\help\common.cs" />
+    <Compile Include="templatecs\help\LinkUs.cs" />
+    <Compile Include="templatecs\Index.cs" />
+    <Compile Include="templatecs\index_new.cs" />
+    <Compile Include="templatecs\PersonalCenter\setting\HeadImg.cs" />
+    <Compile Include="templatecs\PersonalCenter\setting\Info_Set.cs" />
+    <Compile Include="templatecs\PersonalCenter\setting\Pwd_Set.cs" />
+    <Compile Include="templatecs\UserLogin\Login.cs" />
+    <Compile Include="templatecs\UserLogin\Login_Third.cs" />
+    <Compile Include="templatecs\UserLogin\LogOut.cs" />
+    <Compile Include="templatecs\UserLogin\QQlogin.cs" />
+    <Compile Include="templatecs\UserLogin\Register.cs" />
+    <Compile Include="templatecs\UserLogin\SinaLogin.cs" />
+    <Compile Include="templatecs\UserLogin\wechat_return_url.cs" />
+    <Compile Include="templatecs\UserLogin\WeiXinLogin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{9EF3951B-30C9-4AFE-BC2B-C76E54536E78}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{F3C00B5F-8AB4-4F9E-9EBA-6A26202F11C7}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7DB967A5-F493-4A36-BE42-614383C3BFC7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{EEE48973-A123-4785-9667-A4C31A5E59EE}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{6BD0BE8C-8BC5-4927-8B47-B0AEBB91EE0C}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\zh-Hans\" />
+    <Folder Include="indexCopy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templatecs\Handle\FindPwdHandle.ashx" />
+    <Content Include="templatecs\Handle\LoginHandle.ashx" />
+    <Content Include="templatecs\Handle\RegisterHandle.ashx" />
+    <Content Include="templatecs\Handle\ThirdRegisterHandle.ashx" />
+    <Content Include="templatecs\Handle\PersonalHandle.ashx" />
+    <Content Include="templatecs\Handle\upload.ashx" />
+    <Content Include="templatecs\Handle\Create_html_handle.ashx" />
+    <None Include="template\js\layer\skin\default\Thumbs.db" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

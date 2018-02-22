@@ -1,0 +1,71 @@
+﻿/* prompt */
+.prompt-box{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	min-width: 80px;
+	min-height: 100px;
+	max-width: 400px;
+	border: 1px solid #ddd;
+	color: #505050;
+	background-color: #fff;
+	z-index: 100;
+}
+.prompt-head{
+	border-bottom: 1px solid #ddd;
+	padding: 0 20px;
+	line-height: 40px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f0f0), to(#e8e8e8));
+	background: -moz-linear-gradient(top, #f2f0f0,#e8e8e8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f0f0,endColorstr=#e8e8e8,grandientType=0);
+	background-color: #e8e8e8;
+	overflow: hidden;
+}
+.prompt-head em{
+	float: left;
+}
+.prompt-head button{
+	float: right;
+	margin-top: 8px;
+	border: 0;
+	outline: 0;
+	color: #505050;
+	font-size: 16px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.prompt-content{
+	padding: 50px;
+	text-align: center;
+}
+.prompt-content p{
+	line-height: 20px;
+	text-align: left;
+}
+.prompt-btns{
+	padding-top: 30px;
+}
+.prompt-btns button{
+	min-width: 80px;
+	max-width: 120px;
+	height: 30px;
+	border: 1px solid #d3d3d3;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.prompt-btns .btn1{
+	color: #fff;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#8b1012), to(#731617));
+	background: -moz-linear-gradient(top, #8b1012,#731617);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8b1012,endColorstr=#731617,grandientType=0);
+	background-color: #731617;
+}
+.prompt-btns .btn2{
+	margin-left: 26px;
+	color: #505050;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f0f0), to(#e8e8e8));
+	background: -moz-linear-gradient(top, #f2f0f0,#e8e8e8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f0f0,endColorstr=#e8e8e8,grandientType=0);
+	background-color: #e8e8e8;
+}

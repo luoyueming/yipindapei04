@@ -1,0 +1,75 @@
+﻿#parse("/Head.html")
+
+	<link rel="stylesheet" type="text/css" href="/template/style/PersonalCenter/modify.css">
+
+	<!-- 主体 -->
+	<div class="container">
+
+		<div class="box">
+			
+			<div class="modify-box">
+				
+				<div class="tab-box">
+					<a class="active" href="/people_c">基础资料</a>
+					<a href="/people_c/pwd_set">修改密码</a>
+				</div>
+
+				<div class="tab-content">
+					
+					<span class="b">
+						<label>头像：</label>
+						<img src="$!comlogo_big" height="100" width="100" alt="$!nickname" id="logo_img">
+						<span class="upload-box">
+							<!--<input type="button" name="" id="upid" onclick="upload_logos()">-->
+                            <!--<a href="javascript:void(0)">修改头像</a>-->
+                            <a id="updateHeadImg" href="javascript:void(0);">更换头像</a>
+						</span>
+						<b class="err"></b>
+					</span>
+
+					<span class="b">
+						<label>昵称：</label>
+						<input type="text" name="" id="uname" value="$nickname" placeholder="昵称" maxlength="16">
+						<b class="err showlen"></b>
+					</span>
+
+					<span class="b btns-box">
+						<button type="button" onclick="Save_Info()">提交</button>
+					</span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /主体 -->
+
+    
+    <input type="hidden"  id="hidlogo" value="$comlogo"/>
+        	
+	<!--底部-->
+    #parse("/Foot.html")
+
+
+<!--*******************************头像部分代码开始*******************************-->
+
+<div id="uploads-img" class="hide">
+    <div class="DIY-layer">
+        <div class="uploads-img">
+            <h3>
+                <em>上传头像</em> <a class="D-closeBtn" href="javascript:void(0);" id="closeHeadImg"></a>
+            </h3>
+            <div class="layerBoxContent clearfix">
+                <iframe src="#" name="headimg" style="width:600px; height:460px;overflow:hidden; border:0px;" frameborder="no"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!--*******************************头像部分代码结束*******************************-->
+
+
+<script type="text/javascript" src="/template/js/personalcenter/setting/infoset.js"></script>
+<script type="text/javascript" src="/template/js/personalcenter/setting/cutimg.js"></script>
+

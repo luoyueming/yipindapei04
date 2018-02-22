@@ -1,0 +1,17 @@
+
+.page_list{text-align: center;}
+.page_list ul{float:none;display: inline-block;padding-bottom: 0; overflow: hidden;}
+.page_list li{float:left;border-bottom: 0;padding-bottom: 0;}
+.page_list ul a{float:left;padding:8px 12px;background:#585859;color:#fff;line-height: 1;font-size:18px;}
+.page_list a.N-commonNext,.page_list a.N-commonPrev{padding:0px 14px;font-size:14px;width:45px;height: 34px;line-height: 34px;}
+.page_list ul .page_list_current,.page_list a:hover{background:#efb33f;}
+.page_list p{float:right;line-height:30px;overflow:hidden;vertical-align:top;}
+.page_list .page_jump{background:#efb33f;width:40px;height:30px;margin:0 10px;border:0;text-align:center;color:#fff;line-height:30px;}
+.page_list p a{padding:0 12px;background:#efb33f;color:#fff;margin-left:10px;display:inline-block;vertical-align:middle;}
+
+
+.pagecss .page_list li{float:left;border-bottom: 0;padding-bottom: 0; margin-left:12px; margin-top:30px;}
+
+
+
+

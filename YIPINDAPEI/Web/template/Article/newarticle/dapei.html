@@ -1,0 +1,61 @@
+﻿#parse("/head_article.html")
+<link rel="stylesheet" type="text/css" href="/template/style/article/newlist.css">
+<!--    <div class="top-ad-box clearfix" style="display:block;">
+            <div class="top-nav">
+           
+           
+                    <div class="txtMarquee-top">
+                        <span style="color:#999;">热点</span>：
+			            <div class="bd">
+				            <div class="tempWrap" style="overflow:hidden; position:relative; height:20px">
+                                <ul class="infoList" style="top: -59.9931px; position: relative; padding: 0px; margin: 0px;">
+					                $!hotarticle
+
+				                </ul>
+                            </div>
+			            </div>
+		            </div>
+
+           </div>
+      
+    </div>-->
+
+    #if($!typepurl!="/dapei/")
+
+    <div class="sp_type_nav">
+        
+        $!adimgs
+
+        <div class="type_sections">
+            
+            $!Second_Third
+        
+        </div>
+    </div>
+
+    #end
+    
+    
+    <div class="shop">
+        $!list
+    </div>
+    <div class="pagination-box">
+		$!listPage
+    </div>
+#parse("/article/newarticle/acommon.html")
+
+<div style="display:none;">
+    $!redirecturl_error
+</div>
+
+        <input type="hidden" id="hidtype" value="$!typepurl" />
+
+<!--底部-->
+
+#parse("/foot_index.html")
+<script type="text/javascript" src="/template/js/article/jquery.SuperSlide.2.1.1.js"></script>
+
+<script type="text/javascript" src="/template/js/article/newarticle/dapei.js"></script>
+
+
+

@@ -1,0 +1,204 @@
+/* 已赞用户列表弹出层的css*/
+#praise{height:294px;display:none;padding:12px 14px;overflow-y:auto;overflow-x:hidden;}
+#praise .user_lists{background:url(/template/img/praise_list_bg.png) repeat-x 0 -236px;float:left;}
+.userInfo_left{background:url(/template/img/praise_list_bg.png) no-repeat 0 0;}
+.userInfo_right{background:url(/template/img/praise_list_bg.png) no-repeat right -472px;height:204px;width:310px;padding:22px 8px 10px;}
+/*.wrap{height:204px;}*/
+.wrap .GA1_left{width:95%;padding-left:16px;}
+.wrap .GA1_right{margin-top:-160px;padding-right:16px;}
+#userinfo  .GA1_right{margin-top:-160px;padding-right:16px;margin-left:106px;float:left;}
+/*  图文环绕1 */
+.GA1{line-height:24px;}
+.GA1 a,.GA1 span,.GA1 em,.GA1 i{font-size:12px;}
+.GA1 a:hover{color: #40A4E3}
+.GA1_left{float:left;}
+.GA1_right{float:right;}
+.GA1_bottom{float:left;width:90%;border-top:1px solid #c4c5c7;padding:0 16px;margin-top:6px;line-height:38px;}
+.GA1 .user_photo{display:block;margin-bottom:12px;}
+.GA1_right .user_name{font-size:14px;color:#40a4e3;}
+
+/*  头像尺寸  */
+.ps40a40 img{width:40px;height:40px;max-width:none;}
+.ps30a30 img{width:30px;height:30px;max-width:none;}
+.ps80a80 img{width:80px;height:80px;max-width:none;}
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.MR20px span{margin-right:20px;}
+.MR20px a{margin-right:20px;}
+
+/* */
+.GA1 .i{display:inline-block;height:20px;width:20px;vertical-align:middle;text-indent:-9999em;margin:0 0 0 6px;*+text-indent:0;*+line-height:0;*+font-size:0;}
+
+.Sex{background:url(/template/img/usercard/sex.png) no-repeat;}
+.man{background-position:50% -34px;}
+.woman{background-position:50% 0;}
+
+.raceBowl{background:url(/template/img/usercard/raceBowl.png) no-repeat;}
+
+.Vip{background:url(/template/img/usercard/vip.png) no-repeat 50% 0;}
+
+.Bole{background:url(/template/img/usercard/Bole.png) no-repeat;}
+
+.Address{padding-left:20px;background:url(/template/img/usercard/adress.png) no-repeat 0 4px;display:inline-block;}
+
+.grade1{ background-position: -344px 1px;}
+.grade2{ background-position: -260px 1px;}
+.grade3{ background-position: -176px 1px;}
+.grade4{ background-position: -92px 1px;}
+.grade5{ background-position: -8px 1px;}
+
+/*举报按钮弹出层的css*/
+#report{padding:18px 18px;display:none;}
+.ck_sets{overflow:hidden;}
+#report dt{line-height:30px;}
+.ck_sets dd{float:left;padding-right:64px;line-height:30px;}
+.ck_sets dd span{display:inline-block;width:17px;height:16px;border:1px solid #ccc; vertical-align:middle;}
+.ck_substitute_checked{display:inline-block;width:17px;height:16px;border:1px solid #9bcaeb; vertical-align:middle;background:url(/template/img/checkbox_bg.png) no-repeat 0 0;}
+.ck_sets input{display:none;}
+.ck_sets label{margin-left:10px;}
+
+.expain{margin-top:20px;}
+.expain textarea{resize:none;width:450px;height:70px;border:1px solid #ccc;}
+.report_subBtn{border:0;outline:0;width:172px;height:38px;background:#1777a9;font-size:16px;color:#fff;margin-top:16px;}
+
+/* 纠错时弹出层的css */
+.error_area{padding:20px;display:none;}
+.error_area textarea{width:428px;margin-bottom:16px;resize:none; vertical-align:top; word-break:break-all;word-wrap:break-word;border:0;}
+.con{height:118px;overflow:auto;}
+.reason{height:70px;}
+.error_area p{margin:10px 0;position:relative;}
+.error_area .sub_wrap{padding-left:48px;}
+.sub_wrap input{width:172px;height:38px;line-height:38px;text-align:center;color:#fff;border:0;outline:0;background:#1777a9;cursor:pointer;}
+.error_area .wordNumTip{position:absolute;right:4px;bottom:4px;font-size:12px;}
+.WU-position{display:inline-block;vertical-align:top;width:428px;border:1px solid #c4c5c7;}
+
+
+/*  重写弹框的样式  */
+.xubox_layer{box-shadow:0 0 4px 1px rgba(7,0,1,0.5); -moz-box-shadow:0 0 4px 1px rgba(7,0,1,0.5); -webkit-box-shadow:0 0 4px 1px rgba(7,0,1,0.5);border:1px solid rgb(196, 197, 199)\9;}
+.xubox_layer .xubox_page{width:100%;position:relative;}
+.hide{display:none;}
+.Ywrap{margin:0 auto;}
+.wWrap500px{width:500px;}
+.wWrap510px{width:510px;}
+
+.BtnW184H40px{width:184px;height:40px;line-height:40px;display:inline-block;text-align:center;}
+.BtnW140H40px{width:140px;height:40px;line-height:40px;display:inline-block;text-align:center;}
+.bc1777a9Y{background-color:#1777a9;color:#fff;}
+.bcd6d6d6Y{background-color:#d6d6d6;}
+.ptb52px{padding:52px 0;}
+.ptb32px{padding:32px 0;}
+.ptb64px{padding:64px 0;}
+.Yw274px{width:274px;}
+.Ymb20px{margin-bottom:20px;}
+.Ymb30px{margin-bottom:30px;}
+.Ymb24px{margin-bottom:24px;}
+.Ymrl30p76p{margin-right:76px;margin-left:30px;}
+
+/*  提示  */
+.msgContentY{display:block;padding:52px 0;text-align:center;width:250px;margin:0 auto;line-height:24px;}
+.msgBtnsY{text-align:center;display:block;}
+.intervalY{display:inline-block;width:36px;height:10px;}
+
+/*  登陆  */
+.loginY{padding-top:50px;text-align:center;}
+.lYInput{border:1px solid #c4c5c7;border-radius:4px;height:38px;line-height:38px;text-align:center;}
+.subBtnY{height:40px;line-height:40px;text-align:center;display:block;margin:0 auto;}
+.lTipY{margin:0 auto;}
+.lTipY a,.lTipY span{font-size:12px;line-height:32px;}
+.lTipY a{color:#37a6f7;}
+
+/*   点评   */
+.commentWrapY label{width:70px;text-align:right;display:inline-block;white-space:nowrap;}
+.commentWrapY textarea{width:428px;height:64px;border:0;resize:none;vertical-align:top;}
+.YwordTip{position:absolute;right:2px;bottom:2px;}
+.YwordTip{font-size:12px;color:rgba(0,0,0,0.2);}
+.YwordTip i,.YwordTip strong{font-size:12px;}
+.textareaWrap{position:relative;margin-bottom:36px;}
+.textareaWrap div.floatLeft{height:64px;width:428px;border:1px solid #c4c5c7;padding-bottom:14px;}
+
+/*  分组  */
+.gTypeWrapY{padding-bottom:10px;}
+.gTypeList{float:left;width:430px;}
+.gTypeList li{float:left;width:180px;margin-right:20px;padding-bottom:20px;white-space:nowrap;}
+.gTypeList li font{margin-left:10px;}
+.Sradio{display:inline-block;width:12px;height:12px;background:url(/template/img/personalCenter/radioPic.png) no-repeat 0 0;float:none;vertical-align:middle;}
+.SradioCked{background:url(/template/img/personalCenter/radioPic.png) no-repeat 0 -24px;}
+.pb30px{padding-bottom:30px;}
+.txtInput{width:274px;height:38px;border:1px solid #c4c5c7;vertical-align:top;margin-right:10px;line-height:40px;text-indent:1em;}
+
+
+
+/*  企业的弹层样式   */
+.m-box{display: none; width: 100%;height: 100%;background: url(/template/img/ccard/bg.png) repeat 0 0;z-index: 100; position:fixed!important;position:absolute;left: 0;top: 0;
+_top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);}
+.m-box .jobsmbox{width: 478px;height: 227px;padding: 0 18px;left: 50%;margin-left: -248px;top: 200px;z-index: 100; position:fixed!important;position:absolute;
+_top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);}
+.m-box .box-title{padding: 0 18px; height: 31px;line-height: 31px;color: #58585b;font-size: 14px;background-color: #f0f0f0;position: relative;}
+.m-box .box-title a{display: block;width: 9px;height: 8px;position: absolute;right: 20px;top: 12px;background: url(/template/img/ccard/close.png) no-repeat 0 0;}
+.m-box .box-content{padding: 50px 0 50px 152px;line-height: 26px;color: #58585b;background-color: #fff}
+.m-box .box-foot{height: 35px;line-height: 35px; text-align: center;background-color: #f3f3f3}
+.m-box.jobox .box-foot a{display: inline-block;margin: 5px 18px;height: 24px;width: 46px;text-align: center;line-height: 24px;background: url(/template/img/ccard/btn2.png) no-repeat 0 0;text-indent: -1000em;*text-indent:0;*+line-height:0;*+font-size:0;}
+.m-box.jobox .box-foot .do{color: #fff;}
+.m-box.jobox .box-foot .donot{color: #535353;background-position: right top;}
+
+
+.G-Agreetment{padding:22px;line-height:24px;overflow:auto;height:498px;}
+.G-Agreetment p{text-indent:2em;margin-bottom:24px;}
+.layer-btn{display:block;text-align:center;}
+.layer-btn a{display:inline-block;width:186px;height:40px;line-height:40px;background-color:#1777a9;color:#fff;}
+
+.scW260H40px .select2-container .select2-choice{height:inherit;line-height:inherit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

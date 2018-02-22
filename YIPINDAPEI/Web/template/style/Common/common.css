@@ -1,0 +1,120 @@
+/* header */
+.header{
+	height: 50px;
+	line-height: 50px;
+	background-color: #991010;
+}
+.menu-box{
+	float: left;
+}
+.menu-box li{
+	float: left;
+}
+.menu-box li a{
+	display: inline-block;
+	width: 120px;
+	color: #fff;
+	text-align: center;
+}
+.menu-box .active{
+	color: #991010;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+.login-box{
+	float: right;
+	color: #fff;
+}
+.login-box a{
+	color: #fff;
+}
+.login-box .user-center{
+	margin-right: 24px;
+}
+.login-box .user-center img{
+	border-radius: 100%;
+}
+.login-box .user-center span{
+	margin-right: 12px;
+}
+
+
+/* /header */
+
+/* footer */
+.footer{
+	height: 100px;
+	color: #fff;
+	line-height: 100px;
+	background-color: #3c3c3c;
+}
+.footer a{
+	color: #fff;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+/* /footer */
+
+html{
+	min-width: 1100px;
+	font-size: 87.5%;
+	background-color: #f8f8f8;
+}
+.box{
+	width: 1080px;
+	margin: 0 auto;	
+}
+.container{
+	min-height: 498px;
+	padding-bottom: 150px;
+	background: url(/template/img/bgIcon.png) repeat-y 0 0;
+}
+
+.logo-box{
+	padding: 24px 0 16px;
+	text-align: center;
+}
+
+.photo-box{
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-perspective: 300px;
+	-moz-perspective: 300px;
+	-ms-perspective: 300px;
+	-o-perspective: 300px;
+	perspective: 300px;
+}
+.photo-box img{
+	transition: all .3s linear;
+}
+
+.icon-woman{
+	color: #953636;
+	font-family: verdana;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.icon-man{
+	color: #0a67c1;
+	font-family: verdana;
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+/*无数据显示默认图   宋明亮   2015-08-09 1448*/
+.nodata {
+    background: rgba(0, 0, 0, 0) url("/template/img/nocontent.png") no-repeat scroll center center;
+    padding: 190px 0;
+    text-indent: -1000em;
+}
+/*END*/

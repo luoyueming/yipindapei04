@@ -1,0 +1,206 @@
+﻿
+        .m-first .first {
+            float: right;
+            height: 480px;
+            margin: 0 0 20px;
+            position: relative;
+            width: auto;
+        }
+        .wjtab
+        {
+            width:360px;
+            }
+        .wjtab ul li
+        {
+            display:inline-block;
+            }
+        .wjtab ul li a {
+            border: 1px solid #ccc;
+            color: #000;
+            display: block;
+            font-size: 15px;
+            margin: 10px 7px;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .g-side {
+            margin-bottom: 13px;
+        }
+        .m-first-top .news li {
+            height: 40px;
+            line-height: 56px;
+
+            width: auto;
+        }
+        .secondbottom
+        {
+            margin: 33px 0 20px;
+            }
+        .secondbottom ul li
+        {
+            float:left;
+            }
+        .secondbottom ul li a
+        {
+            display:block;
+            padding:0 18px;
+            border-left:1px solid #333;
+            color:#333;
+            font-size:15px;
+        }
+        .secondbottom ul li:nth-child(1) a
+        {
+          border-left:none;
+          padding-left:0;
+        }
+        .secondbottom ul li.active a,.secondbottom ul li a:hover
+        {
+            color:#c0292a;
+         }
+         .persname
+         {
+             display:none;
+          }
+         .persname a
+         {
+             display:block;
+             width:242px;
+             height:110px;
+             background:#f2f2f2;
+             margin-top:20px;
+             float:left;
+             
+        }
+        .persname a:nth-child(2)
+        {
+            margin-left: 17px;
+            margin-right: 17px;
+         }
+        .persname a:nth-child(5)
+        {
+            margin-left: 17px;
+            margin-right: 17px;
+            }
+        .persname a span
+        {
+             border: 1px solid #ccc;
+            border-radius: 100%;
+            display: inline-block;
+            height: 87px;
+            margin-left: 15px;
+            margin-right:34px;
+            margin-top: 10px;
+            width: 87px;
+       }
+       .persname a b
+       {
+           color:#333;
+           font-size:21px;
+       }
+       .persname a span img
+       {
+           border:1px solid #ccc;
+           width:100%;
+           height:100%;
+           border-radius:100%;
+       }
+       .m-first .first67 .today {
+            height: 514px;
+
+        }
+        
+        .m-first .first67 .today .news {
+            height: 400px;
+        }
+        
+        .m-second .ad_first_r {
+            background: none;
+            margin: 0;
+            padding: 0;
+            width: 360px;
+        }
+        
+        .m-first .first67 {
+            margin: 0 0 67px;
+        }
+      
+        .ad_first_r p
+        {
+            display:block;
+            width:250px;
+            height:40px;
+            line-height:40px;
+            background:rgba(0,0,0,0.5);
+            position:absolute;
+            bottom:0;
+            left:45px;
+            color:#fff;
+            text-align:center;
+        }
+        .picShow {
+            margin-left: -90px;
+        }
+        .picShow h3
+        {
+            margin-top:40px;
+           
+            color:#222222;
+            font-size:18px;
+            margin-left: 90px;
+            }
+        .picShow .dperson
+        {
+            float:left;
+            width:80px;
+            height:105px;
+            margin-left:90px;
+             margin-top:40px;
+        }
+        .dperson dt img
+        {
+            width:79px;
+            height:79px;
+            border:1px solid #ccc;
+            border-radius:100%;
+        }
+        .dperson dd a
+        {
+            display:block;
+            height:35px;
+            font-size:16px;
+            color:#222;
+            text-align:center;
+            width:80px;
+            line-height:35px;
+            text-overflow:ellipsis;
+             white-space:nowrap; 
+             overflow:hidden;
+        }
+        .m-first .firstnew .today {
+            height: 416px;
+            border-bottom:none;
+        }
+        .m-first .firstnew .today .news
+        {
+            height:358px;
+            background:#eee;
+            }
+         .m-first .firstnew .today .news div
+         {
+             background:none;
+             text-align:left;
+             height:30px;
+             line-height:30px;
+             font-size:14px;
+             padding-left:50px;
+             padding-top:6px;
+             background:url("/template/img/dian.jpg") 28px 20px no-repeat;             
+             }
+         .m-first .first .today .title
+         {
+             background:#000;
+             color:#fff;
+             text-indent:5px;
+             font-size: 20px;
+            line-height: 46px;
+             }
