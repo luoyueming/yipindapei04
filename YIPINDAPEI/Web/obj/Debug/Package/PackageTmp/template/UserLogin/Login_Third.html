@@ -1,0 +1,52 @@
+﻿#parse("/Head.html")
+
+	<link rel="stylesheet" type="text/css" href="/template/style/userlogin/login.css">
+
+	<!-- 主体 -->
+	<div class="login-container clearfix">
+		
+		<div class="login-container-left">
+			<img src="/template/img/login.jpg" height="573" width="884" alt="衣品搭配">
+		</div>
+
+		<div class="login-form">
+
+            <!--第三方登录-->
+
+                <div class="loginTuceng" style="display:block">
+                  <h3 class="loginTucengT">登录衣品搭配</h3>
+                  <div class="login-type">
+                    <span class="theoneline">——</span><i>选择登录方式</i><span class="thetwoline">——</span>
+                  </div>
+                    <div class="login-third-t">
+                        <a href="javascript:;" class="third-sina" title="新浪微博" id="wb_connect_btn"><img src="/template/img/third-sina.jpg"></a>
+                        <a href="/wechat" class="third-chat" title="微信" target="_blank"><img src="/template/img/third-chat.jpg"></a>
+                        <a href="javascript:;" class="third-qq" id="qqLoginBtn" title="QQ"><img src="/template/img/third-qq.jpg"></a>
+                    </div>
+                   <p class="third-tip">登录即代表你同意<a href="javascript:;" title="衣品搭配服务和隐私条款">衣品搭配服务和隐私条款</a></p>
+                </div>
+
+            <!--END-->
+
+		</div>
+
+	</div>
+	<!-- /主体 -->
+	
+	<!--底部-->
+    #parse("/Foot.html")
+
+    <!--QQ第三方登录-->
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101344941" data-redirecturi="http://www.ypindapei.com/qq" charset="utf-8"></script>
+    <!--END-->
+
+    <!--新浪微博第三方登录-->
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=673567828&debug=true" type="text/javascript" charset="utf-8"></script>
+    <!--END-->
+
+
+    <script type="text/javascript" src="/template/js/userlogin/login_third.js"></script>
+
+
+
+

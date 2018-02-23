@@ -1,0 +1,131 @@
+﻿.assist-page {
+    background-color: #fff;
+    border-top: 5px solid #c0292a;
+    margin: 62px auto 0;
+    width: 1084px;
+}
+.page-details {
+    background: rgba(0, 0, 0, 0) url("/template/img/ico_404.png") no-repeat scroll 320px 86px;
+    color: #333;
+    height: 280px;
+    padding: 86px 0 68px 518px;
+}
+.page-details em {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    padding-top: 74px;
+}
+.page-details strong {
+    font-size: 16px;
+    font-weight: normal;
+}
+.page-details p {
+    font-size: 16px;
+    padding-bottom: 14px;
+    padding-top: 62px;
+}
+.page-details a {
+    font-size: 16px;
+}
+.more-content {
+    padding: 0 50px 36px;
+}
+.more-content h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 18px;
+    padding-left: 72px;
+    padding-left: 0;
+}
+.list-box {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+.listone {
+    border-bottom: 1px solid #ccc;
+    height: 184px;
+    overflow: hidden;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    position: relative;
+    width: 930px;
+}
+.mar0
+{
+    margin-top: 0;
+}
+.list-time {
+    font-weight: 100;
+}
+.list-time {
+    background: rgba(0, 0, 0, 0) url("/template/img/clock.png") no-repeat scroll 0 0;
+    color: #999;
+    float: left;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 24px;
+}
+.list-view-data {
+    display: inline-block;
+    width: 441px;
+}
+.list-view-data {
+    float: right;
+    line-height: 16px;
+    text-align: right;
+}
+.list-view-data a {
+  
+    font-weight:100;
+    color: #999 !important;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.listone dd
+{
+    float: left;
+    padding-left:19px; 
+ }
+.listone dd h3
+{
+    width:477px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    margin-top: 4px;
+    padding-bottom: 8px;
+ }
+.listone dd .hh2
+{
+     height:300px;
+     position: relative;
+     width:600px;
+     margin-top: 24px;
+ }
+ .listone dd .hh2 .content
+ {
+    width:600px;
+    white-space:normal;
+    word-break:break-all;
+    overflow: hidden;
+    height:48px; 
+ }
+ .hh2 .content a
+ {
+      color: #616a71;
+       font-size: 16px; 
+       font-weight: normal;
+       line-height:26px;
+     }
+.main-share
+{
+   height: 30px;
+   margin-top: 67px;
+   position: absolute;
+   left:0;
+   top:27px;  
+ }

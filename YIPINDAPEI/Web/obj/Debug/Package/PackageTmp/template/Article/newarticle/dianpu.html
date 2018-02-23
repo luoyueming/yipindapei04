@@ -1,0 +1,91 @@
+﻿#parse("/head_article.html")
+<link rel="stylesheet" type="text/css" href="/template/style/article/newlist.css">
+<!--    <div class="top-ad-box clearfix" style="display:block;">
+            <div class="top-nav">
+           
+           
+                    <div class="txtMarquee-top">
+                        <span style="color:#999;">热点</span>：
+			            <div class="bd">
+				            <div class="tempWrap" style="overflow:hidden; position:relative; height:20px">
+                                <ul class="infoList" style="top: -59.9931px; position: relative; padding: 0px; margin: 0px;">
+					                $!hotarticle
+
+				                </ul>
+                            </div>
+			            </div>
+		            </div>
+
+           </div>
+      
+    </div>-->
+
+    #if($!typepurl!="/dapei/")
+
+    <div class="sp_type_nav">
+        
+        $!adimgs
+
+        <div class="type_sections">
+            
+            $!Second_Third
+        
+        </div>
+    </div>
+
+    #end
+    
+
+<!-- 
+<div class="orderWrap">	
+
+流行 热销 上新 价格 	
+
+    <div class="orderInfo" data-checkedsort="sell">			
+        <a class="fashion  right" data-sort="pop">流行</a>			
+        <a class="fashion both  on bodertwo " data-sort="sell">热销</a>			
+        <a class="fashion both " data-sort="new">上新</a>			
+        <a class="fashion price left ">				
+            <span class="priceCon">价格</span>
+            <span class="priceArrow"></span>				
+            <ul class="priceDesc">					
+                <li class="down" data-sort="price_desc">价格从高到低</li>					
+                <li class="up" data-sort="price_asc">价格从低到高</li>				
+            </ul>			
+        </a>		
+    </div>		
+
+价格部分	
+
+    <div class="priceWrap">				
+        <input class="minPrice" placeholder="￥" value="" type="text">				
+        <span>~</span>				
+        <input class="maxPrice" placeholder="￥" value="" type="text">			
+        <a class="sure" href="javascript:void(0)">确认</a>		
+    </div>	
+</div>
+-->	
+
+    <div class="shop">
+        $!list
+    </div>
+    <div class="pagination-box">
+		$!listPage
+    </div>
+#parse("/article/newarticle/acommon.html")
+
+<div style="display:none;">
+    $!redirecturl_error
+</div>
+
+        <input type="hidden" id="hidtype" value="$!typepurl" />
+
+<!--底部-->
+
+#parse("/foot_index.html")
+<script type="text/javascript" src="/template/js/article/jquery.SuperSlide.2.1.1.js"></script>
+
+<script type="text/javascript" src="/template/js/article/newarticle/dianpu.js"></script>
+
+
+

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        /*核心条件样式开始*/
+        #cutimg .center
+        {
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+        }
+        #cutimg .center td
+        {
+            text-align: center;
+        }
+        #cutimg img
+        {
+            vertical-align: top;
+            border: 0 none;
+        }
+        /*核心条件样式结束*/
+    </style>
+
+        <!--弹层-->
+    <script type="text/javascript" src="/template/js/common/tanceng.js"></script>
+    <link rel="stylesheet" type="text/css" href="/template/style/common/tanceng.css">
+    <!--END-->
+
+</head>
+<body>
+    <div class="layerBoxContent clearfix">
+        <div class="cut-area" id="cutimg">
+            <table class="center" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td id="biuuu_parent">
+                            <img src="/template/img/cutImg/1.png" style="width: 320px; height: 320px;" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="uploadPic">
+            <div class="u-img160" id="smallImg160">
+                <img src="$!HeadImg">
+            </div>
+            <em class="u-img160-tip">大图片预览 224*224</em>
+            <div>
+                <span><a class="u-img80" id="smallImg80">
+                    <img src="$!HeadImg">
+                </a><em>中图片预览 112*112</em> </span><span class="u-img40-wrap"><a class="u-img40" id="smallImg40">
+                    <img src="$!HeadImg">
+                </a><em>小图片预览 56*56</em> </span>
+            </div>
+        </div>
+        <div class="u-btns">
+            <input type="hidden" id="w" />
+            <input type="hidden" id="h" />
+            <input type="hidden" id="x" value="0" />
+            <input type="hidden" id="y" value="0" />
+            <span>
+                <input type="file" name="file_upload" id="file_upload" class="u-btns-ok" /></span>
+            <a href="javascript:void(0)" data-name="save">保存</a>
+        </div>
+
+        <input  type="hidden" id="dataval" value="" />
+
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/template/js/common/jquery.1.8.3.min.js"></script>
+<!--上传图片引用 +uploadify-->
+<script type="text/javascript" src="/tools/UploadFiles/js/uploadify/jquery.uploadify.min.js"></script>
+<link type="text/css" href="/tools/UploadFiles/js/uploadify/uploadify.css" rel="Stylesheet" />
+<!--裁剪图片引用-->
+<link rel="stylesheet" type="text/css" href="/template/style/cutImg/css/imgareaselect-animated.css" />
+<script type="text/javascript" src="/template/style/cutImg/CutScripts/jquery.imgareaselect.pack.js"></script>
+<link type="text/css" href="/template/style/cutImg/CutImgTip.css" rel="Stylesheet" />
+
+<script type="text/javascript">
+
+    //等比缩放图片
+    function DrawImage(width, height, FitWidth, FitHeight) {
+        var cheight = 0, cwidth = 0;
+        if (width > 0 && height > 0) {
+            if (width / height >= FitWidth / FitHeight) {
+                if (width > FitWidth) {
+                    cwidth = FitWidth;
+                    cheight = (height * FitWidth) / width;
+                }
+                else {
+                    cwidth = width;
+                    cheight = height;
+                }
+            }
+            else {
+                if (height > FitHeight) {
+                    cheight = FitHeight;
+                    cwidth = (width * FitHeight) / height;
+                }
+                else {
+                    cwidth = width;
+                    cheight = height;
+                }
+            }
+        }
+        return "{height:" + cheight + ",width:" + cwidth + "}";
+    }
+    //截图控制效果
+    function preview(img, selection) {
+        var scaleX = 224 / selection.width;
+        var scaleY = 224 / selection.height;
+
+        var w = Math.round(scaleX * img.width);
+        var h = Math.round(scaleY * img.height);
+        var x = Math.round(scaleX * selection.x1);
+        var y = Math.round(scaleY * selection.y1);
+
+        $("#w").val(w);
+        $("#h").val(h);
+        $("#x").val(x);
+        $("#y").val(y);
+
+        //动态小头像 获取当前选中框的宽度，高度，左边框，右边框
+        $('#smallImg160 > div > img').css({
+            width: w + 'px',
+            height: h + 'px',
+            marginLeft: '-' + x + 'px',
+            marginTop: '-' + y + 'px'
+        });
+        $('#smallImg80 > div > img').css({
+            width: (w / 2) + 'px',
+            height: (h / 2) + 'px',
+            marginLeft: '-' + (x / 2) + 'px',
+            marginTop: '-' + (y / 2) + 'px'
+        });
+        $('#smallImg40 > div > img').css({
+            width: (w / 4) + 'px',
+            height: (h / 4) + 'px',
+            marginLeft: '-' + (x / 4) + 'px',
+            marginTop: '-' + (y / 4) + 'px'
+        });
+    }
+
+    $(function () {
+        $("a[data-name=save]").click(function () {
+            FunMsg("请选择图片");
+        });
+        //uploadify上传图片
+        $("#file_upload").uploadify({
+            'auto': true,
+            'swf': '/tools/UploadFiles/js/uploadify/uploadify.swf',
+            'uploader': '/templatecs/Handle/upload.ashx',
+            'multi': false, //是否能选择多个文件
+            'queueID': 'fileQueue', //显示上传文件队列的元素id，可以简单用一个div来显示
+            'cancelImage': '', //[必须设置]取消图片的路径
+            'buttonText': '选择图片', //上传按钮的文字
+            'buttonImage': false, //上传按钮的背景图片
+            'width': 114, //上传按钮的高和宽 
+            'height': 30,
+            'removeCompleted': true,  //表示在上传完成后是否删除队列中的对应元素。默认是True，即上传完成后就看不到上传文件进度条了
+            "removeTimeout": "0", //表示上传完成后多久删除队列中的进度条，默认为3
+            "fileSizeLimit": "4096KB", //上传文件大小限制，默认单位是KB
+            "fileTypeExts": "*.jpg;*.gif;*.png", //指定允许上传的文件类型。默认*.*
+            "fileObjName": "Filedata",            // 上传参数名称
+            "formData": { "folder_name": "HongRen_UserHead" },
+            "onSelect": function () { //选择文件后触发 
+                //禁用Uploadify
+                //$("#file_upload").uploadify("disable", true);
+            },
+            'overrideEvents': ['onSelectError', 'onDialogClose'], //屏蔽内部错误提示
+            'onFallback': function () { //检测FLASH失败调用
+                FunMsg("您未安装FLASH控件，无法上传！请安装FLASH控件后再试。");
+            },
+            "onSelectError": function (file, errorCode, errorMsg) {
+                //选择文件出错时触发，返回file,erroCode,errorMsg三个参数
+                /*
+                errorCode是一个包含了错误码的js对象，用来查看事件中发送的错误码，以确定错误的具体类型，可能会有以下的常量：
+                QUEUE_LIMIT_EXCEEDED:-100 选择的文件数量超过设定的最大值；
+                FILE_EXCEEDS_SIZE_LIMIT:-110 文件的大小超出设定
+                INVALID_FILETYPE:-130 选择的文件类型跟设置的不匹配
+    
+                errorMsg 完整的错误信息，如果你不重写默认的事件处理器，可以使用‘this.queueData.errorMsg’ 存取完整的错误信息
+                */
+
+                var settings = this.settings;
+                if (errorCode == -110) {
+                    FunMsg("文件最大限制" + settings.fileSizeLimit);
+                }
+                if (errorCode == -130) {
+                    FunMsg("图片格式只支持：*.jpg;*.gif;*.png");
+                }
+            },
+            "onUploadStart": function (file) {
+                /*
+                每更新一个文件上传进度的时候触发,返回以下参数
+                file 正上传文件对象
+                bytesUploaded 文件已经上传的字节数
+                bytesTotal 文件的总字节数
+                totalBytesUploaded 在当前上传的操作中（所有文件）已上传的总字节数
+                totalBytesTotal 所有文件的总上传字节数
+                */
+
+                //动态设置参数的值
+                //$("#file_upload").uploadify("settings", "formData", {"id":"1"});
+            },
+            "onUploadError": function (file, errorCode, erorMsg, errorString) {
+                /*一个文件完成上传但返回错误时触发，有以下参数                
+                file 完成上传的文件对象
+                errorCode 返回的错误代码
+                erorMsg 返回的错误信息
+                errorString 包含所有错误细节的可读信息*/
+            },
+            "onUploadSuccess": function (file, data, response) {
+                //                FunMsg(data);
+
+                if (data == "sizeError") {
+                    FunMsg("图片长宽必须大于等于224像素");
+                    return;
+                }
+                var RequestData = eval("(" + data + ")");
+                //计算图片长宽并适应DIV大小
+                var CreateWH = eval("(" + DrawImage(RequestData.width, RequestData.height, 320, 320) + ")");
+                //把算好的图片添加到指定的位置
+                $("#biuuu_parent").html('<img src="' + RequestData.path + '" id="biuuu" style="width:' + CreateWH.width + 'px;height:' + CreateWH.height + 'px;" />');
+                $("#w").val(Math.round(CreateWH.width)); $("#h").val((CreateWH.height));
+                $(".imgareaselect-selection").parent().remove();
+                $(".imgareaselect-outer").remove();
+
+                //开始初始化截图
+                $('#biuuu').imgAreaSelect({
+                    x1: 0, y1: 0, x2: 224, y2: 224,
+                    aspectRatio: '1:1', //选择框比例，这里1：1为正方形
+                    handles: true, //四角方块隐现                
+                    onSelectChange: preview //选择框变化时触发事件
+                });
+
+                //初始化小头像显示
+                $('#smallImg160').html("");
+                $("<div><img src='" + RequestData.path + "' style='position: relative;width:" + CreateWH.width + "px;height:" + CreateWH.height + "px;' /></div>").css({
+                    float: 'left',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: '224px',
+                    height: '224px'
+                }).appendTo($('#smallImg160'));
+                $('#smallImg80').html("");
+                $("<div><img src='" + RequestData.path + "' style='position: relative;width:" + (CreateWH.width / 2) + "px;height:" + (CreateWH.height / 2) + "px;' /></div>").css({
+                    float: 'left',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: '112px',
+                    height: '112px'
+                }).appendTo($('#smallImg80'));
+                $('#smallImg40').html("");
+                $("<div><img src='" + RequestData.path + "' style='position: relative;width:" + (CreateWH.width / 4) + "px;height:" + (CreateWH.height / 4) + "px;' /></div>").css({
+                    float: 'left',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: '40px',
+                    height: '40px'
+                }).appendTo($('#smallImg40'));
+
+                $("a[data-name=save]").unbind("click").click(function () {
+
+                    jQuery.post("/templatecs/Handle/save.ashx", { "pathimg": RequestData.jdpath, "h": $("#h").val(), "w": $("#w").val(), "x": $("#x").val(), "y": $("#y").val() }, function (data, status) {
+                        if (status == "success") {
+
+                            if (data != "1" && data != -1) {
+                                var arr = data.split("|");
+
+                                $("#resumeHeadImg", window.parent.document).attr("src", arr[0]);
+                                $("#uploads-img", window.parent.document).hide();
+
+                                $(window.parent.document).find("#logo_img").attr("src", arr[0]);
+                                $(window.parent.document).find("#hidlogo").val(arr[1]);
+
+                                $("#biuuu_parent img").attr("src", "/template/img/cutImg/1.png");
+
+
+                                FunMsg("保存成功");
+
+                            }
+                            if (data == "-1") {
+                                FunMsg("请先登录");
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    })
+</script>

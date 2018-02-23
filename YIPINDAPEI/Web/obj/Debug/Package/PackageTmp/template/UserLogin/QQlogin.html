@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+</head>
+<body>
+
+<script type="text/javascript" src="/template/js/common/jquery.1.8.3.min.js"></script>
+
+<!--QQ第三方登录-->
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101344941" data-redirecturi="http://www.ypindapei.com/qq" charset="utf-8"></script>
+
+<style type="text/css">
+    #qqLoginBtn{ background-image:url("/template/img/thirdlogin/connect_logo_7.png");}
+</style>
+
+
+
+<span id="qqLoginBtn"></span>
+
+
+<!--
+
+3.1.4 获取并存储access token以及openid
+
+成功登录后，即可发送请求来获取access token以及openid，这两个参数在调用OpenAPI访问和修改用户数据时必须传入，网站需自行绑定或存储： （1）access token用来判断用户在本网站上的登录状态，具有3个月有效期，用户再次登录时自动刷新。 （2）openid是此网站上唯一对应用户身份的标识，网站可将此ID进行存储便于用户下次登录时辨识其身份，或将其与用户在网站上的原有帐号进行绑定。
+
+-->
+
+
+
+<!--<script type="text/javascript">
+//    QC.Login({
+//        btnId: "qqLoginBtn"    //插入按钮的节点id
+//    });
+</script>-->
+
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" charset="utf-8" data-callback="true"></script>
+<!--
+    <script type="text/javascript">
+//        //从页面收集OpenAPI必要的参数。get_user_info不需要输入参数，因此paras中没有参数
+//        var paras = {};
+
+//        //用JS SDK调用OpenAPI
+//        QC.api("get_user_info", paras)
+//        //指定接口访问成功的接收函数，s为成功返回Response对象
+//	    .success(function (s) {
+////	        //成功回调，通过s.data获取OpenAPI的返回数据
+////	        alert("获取用户信息成功！当前用户昵称为：" + s.data.nickname + "，性别为：" + s.data.gender + "，所在地区为：" + s.data.province + s.data.city + "，出生日期为：" + s.data.year + "，QQ空间小头像地址为：" + s.data.figureurl + "" + "，QQ空间中头像地址为：" + s.data.figureurl_1 + "，QQ空间大头像地址为：" + s.data.figureurl_2 + "，QQ小头像地址为：" + s.data.figureurl_qq_1 + "，QQ大头像地址为：" + s.data.figureurl_qq_2);
+//	    })
+//            //指定接口访问失败的接收函数，f为失败返回Response对象
+//	    .error(function (f) {
+//	        //失败回调
+//	        alert("获取用户信息失败！");
+//	    })
+////            //指定接口完成请求后的接收函数，c为完成请求返回Response对象
+////	    .complete(function (c) {
+////	        //完成请求回调
+////	        alert("获取用户信息完成！");
+        ////	    });
+
+</script>
+-->
+<!--
+<script type="text/javascript">
+
+    
+
+    
+
+    //调用QC.Login方法，指定btnId参数将按钮绑定在容器节点中
+    QC.Login({
+        //btnId：插入按钮的节点id，必选
+        btnId: "qqLoginBtn",
+        //用户需要确认的scope授权项，可选，默认all
+        scope: "all",
+        //按钮尺寸，可用值[A_XL| A_L| A_M| A_S|  B_M| B_S| C_S]，可选，默认B_S
+        size: "A_XL"
+    }, function (reqData, opts) {//登录成功
+        //根据返回数据，更换按钮显示状态方法
+        var dom = document.getElementById(opts['btnId']),
+       _logoutTemplate = [
+        //        //openId
+        //            '<span>openId：' + openId + '，accessToken：' + accessToken + '</span>',
+        //大头像
+            '<span><img src="{figureurl_qq_2}" class="{size_key}"/></span>',
+        //小头像
+            '<span><img src="{figureurl_qq_1}" class="{size_key}"/></span>',
+        //昵称
+            '<span>{nickname}</span>',
+        //性别
+            '<span>{gender}</span>',
+        //退出
+            '<span><a href="javascript:QC.Login.signOut();">退出</a></span>'
+       ].join("");
+        dom && (dom.innerHTML = QC.String.format(_logoutTemplate, {
+            nickname: QC.String.escHTML(reqData.nickname), //做xss过滤
+            gender: reqData.gender,
+            figureurl_qq_2: reqData.figureurl_qq_2,
+            figureurl_qq_1: reqData.figureurl_qq_1
+        }));
+
+        //获取用户openId和accessToken
+        QC.Login.getMe(function (openId, accessToken) {
+
+            $(dom).append("<span>openId:" + openId + "，accessToken：" + accessToken + "</span>");
+
+
+        });
+
+    }, function (opts) {//注销成功
+        alert('QQ登录 注销成功');
+    }
+);
+</script>
+-->
+
+
+<script>
+    $("#qqLoginBtn").css("background", "none")
+
+//    //QQ登录状态
+//    var lstate = QC.Login.check();
+//    alert(lstate);
+</script>
+		
+
+</body>
+</html>
+
+<script type="text/javascript" src="/template/js/userlogin/login_third.js"></script>

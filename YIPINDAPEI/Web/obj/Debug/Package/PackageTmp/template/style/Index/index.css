@@ -1,0 +1,256 @@
+.item-box{
+	position: relative;
+	padding-top: 50px;
+}
+.item-box:nth-child(3):before{
+	position: absolute;
+	right: -8px;
+	top: 26px;
+	content: '';
+	width: 106px;
+	height: 105px;
+	background: url(/template/img/mark.png) no-repeat 0 0;
+	z-index: 2;
+}
+.item-box:nth-child(4):before{
+	position: absolute;
+	right: -8px;
+	top: 26px;
+	content: '';
+	width: 106px;
+	height: 105px;
+	background: url(/template/img/mark.png) no-repeat 0 -105px;
+	z-index: 2;
+}
+.item-box h3{
+	padding-bottom: 14px;
+	color: #991010;
+	font-size: 20px;
+	font-weight: bold;
+}
+.item-content{
+	border-top: 1px solid #991010;
+	background-color: #fff;
+}
+
+.party-info{
+	float: left;
+	width: 200px;
+	border-right: 1px solid #d3d3d3;
+	padding: 20px;
+	color: #505050;
+	background-color: #e7e8ea;
+}
+.leader a, .party-info a{
+	color: #505050;
+}
+.leader a:hover, .party-info a:hover{
+	text-decoration: underline;
+}
+.leader h4, .party-info h4{
+	padding-top: 18px;
+	padding-bottom: 12px;
+	font-weight: bold;
+	line-height: 20px;
+}
+.leader p, .party-info p{
+	padding-top: 10px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+.leader {
+	float: left;
+	width: 200px;
+	margin-top: 24px;
+	margin-right: 10px;
+	border-right: 1px dashed #c9caca;
+	padding: 0 20px;
+}
+.photo-box {
+	width: 200px;
+	height: 200px;
+}
+.user-box:hover .photo-box img{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.other-members{
+	padding-top: 24px;
+}
+.other-members a{
+	color: #505050;
+}
+.other-members a:hover{
+	text-decoration: underline;
+}
+.other-members li{
+	float: left;
+	margin-left: 10px;
+	padding-bottom: 28px;
+}
+.other-members li em{
+	display: block;
+	padding-top: 20px;
+	text-align: center;
+}
+.other-members .photo-box{
+	width: 180px;
+	height: 180px;
+}
+
+.ad-box{margin-top: 50px;}
+
+.trend-box{
+	padding-top: 24px;
+	padding-left: 4px;
+}
+.trend-box li{
+	float: left;
+	margin-bottom: 30px;
+	margin-left: 16px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+}
+.trend-box li a{
+	color: #505050;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.trend-box li a:hover{
+	color: #d94a4a;
+}
+.trend-box li em{
+	display: block;
+	line-height: 36px;
+}
+.notice-box{
+	float: right;
+	width: 272px;
+	margin-right: 10px;
+	padding-top: 24px;
+	color: #505050;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+.notice-box h4{
+	border-bottom: 1px dashed #cdcece;
+	padding-bottom: 20px;
+	padding-left: 6px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.notice-box p{
+	padding-top: 14px;
+	padding-left: 6px;
+}
+.notice-info{
+	margin-top: 46px;
+	border-top: 1px dashed #cdcece;
+	padding-top: 14px;
+	padding-left: 6px;
+}
+.notice-info em{
+	float: left;
+	margin-top: 8px;
+}
+.notice-info a{
+	float: right;
+	width: 88px;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	background-color: #b00000;
+}
+.committee-box{
+	margin-top: 50px;
+	border: 1px solid #e0e0e0;
+	color: #505050;
+	background-color: #fff;
+}
+.committee-box h3{
+	height: 48px;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: 20px;
+	line-height: 48px;
+}
+.committee-box ul{
+	padding: 24px 0 0 4px;
+}
+.committee-box li{
+	float: left;
+	margin-left: 16px;
+	margin-bottom: 28px;
+	text-align: center;
+}
+.committee-box li a{
+	color: #505050;
+}
+.committee-box li a:hover{
+	text-decoration: underline;
+}
+.committee-box li img{
+	border: 1px solid #e0e0e0;
+}
+.committee-box li em{
+	display: block;
+	padding-top: 14px;
+}
+
+.friendlink-box{
+	font-family: SimSun, sans-serif; 
+	border-top: 1px solid #ddd;
+	background-color: #fff;
+}
+.friendlink-box dl{
+	padding: 42px 0;
+	font-size: 12px;
+	line-height: 34px;
+}
+.friendlink-box dt{
+	float: left;
+	color: #505050;
+}
+.friendlink-box dd{
+	float: left;
+	margin-right: 16px;
+}
+.friendlink-box a{
+	color: #505050;
+}
+.friendlink-box a:hover{
+	text-decoration: underline;
+}
+
+
+/* slides */
+.silder{
+	position: relative;
+}
+.slidesjs-pagination{
+	position: absolute;
+	right: 6px;
+	bottom: 4px;
+	z-index: 20;
+}
+.slidesjs-pagination-item{
+	float: left;
+	margin-left: 2px;
+}
+.slidesjs-pagination-item a{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	background-color: rgba(0,0,0,.5);
+}
+.slidesjs-pagination-item .active{
+	background-color: #000;
+}

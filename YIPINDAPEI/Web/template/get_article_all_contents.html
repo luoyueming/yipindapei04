@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="/template/js/common/jquery.1.8.3.min.js"></script>
+
+</head>
+<body>
+    $!r
+
+<!--    导入类型：
+    <select id="seltype">
+        <option value="0">请选择</option>
+        <option value="1">标题（关键词）</option>
+        <option value="2">内容</option>
+    </select>
+
+    文件路径：
+    <input type="text" id="fileurl" style="width:400px;" />
+
+    <input type="button" id="daoru" value="导入" />-->
+
+<!--    总条数：<label id="total">$!totals</label><br />
+
+    剩余条数：<label id="lefttotal">$!leftss</label><br />
+
+    生成条数：<input type="text" id="top" />
+
+    <input type="button" id="create_html" value="生成文章详情静态页" />
+
+    <input type="button" id="create_list" value="生成文章列表" />-->
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    ////导入标题和内容
+    //    $("#seltype").val('$!f');
+    //    $("#fileurl").val('$!fl');
+
+
+    //    $(document).on("click", "#daoru", function () {
+
+    //        var ftype = $("#seltype option:selected").val();
+
+    //        if (ftype == 0) {
+    //            alert("请选择导入类型");
+    //            return false;
+    //        }
+
+    //        var furl = document.getElementById("fileurl").value;
+
+    //        if (furl == "") {
+    //            alert("文件路径不能为空");
+    //            return false;
+    //        }
+
+    //        window.location.href = "/get_article_all_contents.aspx?type="+ftype+"&furl="+encodeURIComponent(furl);
+
+    //    });
+
+    //生成文章详情静态页
+    $(document).on("click", "#create_html", function () {
+
+        var atop = $("#top").val();
+
+        if (atop == "" || atop == "0") {
+            alert("生成条数不能为空且应该大于0");
+            return false;
+        }
+        else {
+            jQuery.post("/templatecs/handle/Create_html_handle.ashx", { action: "create_html", top: atop }, function (data) {
+                if (data == "notop") {
+                    alert("生成条数不能为空且应该大于0");
+                }
+                else if (data == "ok") {
+                    alert("生成成功");
+                    window.location.href = window.location.href;
+                }
+                else if (data == "less") {
+                    alert("剩余条数不足");
+                }
+                else {
+                    alert("生成失败");
+                }
+            });
+        }
+    });
+
+    //生成文章列表
+    $(document).on("click", "#create_list", function () {
+
+        jQuery.post("/templatecs/handle/Create_html_handle.ashx", { action: "create_list" }, function (data) {
+            if (data == "ok") {
+                alert("生成成功");
+            }
+            else {
+                alert("生成失败");
+            }
+        });
+    });
+
+
+
+</script>
+
